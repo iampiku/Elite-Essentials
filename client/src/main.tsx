@@ -1,28 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import "./index.css";
-
-import App from "./App.tsx";
-import Login from "./pages/Login.tsx";
-
 import { NextUIProvider } from "@nextui-org/react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-   {
-      path: "/",
-      element: <App />,
-   },
-   {
-      path: "/login",
-      element: <Login />,
-   },
-]);
+import routes from "@/router";
+import { RouterProvider } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
    <React.StrictMode>
       <NextUIProvider>
-         <RouterProvider router={router} />
+         <RouterProvider router={routes} />
       </NextUIProvider>
    </React.StrictMode>
 );
