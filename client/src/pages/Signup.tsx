@@ -30,8 +30,9 @@ function Signup() {
             className="col-span-7 mx-auto my-auto"
          >
             <Image
+               loading="eager"
                radius="sm"
-               width={700}
+               width={500}
                alt="login_logo"
                src="/Sign_up.svg"
             />
@@ -43,7 +44,7 @@ function Signup() {
          >
             <CardBody className="flex flex-col">
                <div className="flex flex-col mb-5 text-center">
-                  <p className="text-xl pb-1 font-semibold">
+                  <p className="text-2xl pb-1 font-semibold">
                      Welcome to Elite Essentials
                   </p>
                   <p className="text-small text-default-800 ">
@@ -86,11 +87,15 @@ function Signup() {
                   className="bg-[#066a73] text-white w-full mb-5"
                   onClick={handleLogin}
                >
-                  LOGIN
+                  REGISTER
                </Button>
                <div className="flex justify-center gap-1">
                   <p>Already have an account?</p>
-                  <Link showAnchorIcon className="cursor-pointer">
+                  <Link
+                     showAnchorIcon
+                     className="cursor-pointer"
+                     href="http://localhost:5173/login"
+                  >
                      Login
                   </Link>
                </div>

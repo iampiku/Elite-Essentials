@@ -1,9 +1,6 @@
 import {
    Card,
-   // CardHeader,
    CardBody,
-   // CardFooter,
-   // Divider,
    Link,
    Button,
    Image,
@@ -27,9 +24,15 @@ export default function Login() {
          <Card
             radius="none"
             shadow="none"
-            className="hidden md:col-span-7 mx-auto my-auto"
+            className="md:col-span-7 mx-auto my-auto"
          >
-            <Image radius="sm" width={700} alt="login_logo" src="/Login.svg" />
+            <Image
+               radius="sm"
+               loading="eager"
+               width={500}
+               alt="login_logo"
+               src="/Login.svg"
+            />
          </Card>
          <Card
             radius="none"
@@ -37,7 +40,7 @@ export default function Login() {
             className=" md:col-span-5 my-auto max-w-[600px]"
          >
             <CardBody className="flex flex-col">
-               <div className="flex flex-col mb-5">
+               <div className="flex flex-col mb-5 text-center">
                   <p className="text-2xl pb-1 font-semibold ">
                      Welcome to Elite Essentials
                   </p>
@@ -78,7 +81,9 @@ export default function Login() {
                </Button>
                <div className="flex justify-center gap-1">
                   <p>New on Elite Essentials?</p>
-                  <Link showAnchorIcon>Create an account</Link>
+                  <Link showAnchorIcon href="http://localhost:5173/signup">
+                     Create an account
+                  </Link>
                </div>
             </CardBody>
          </Card>
