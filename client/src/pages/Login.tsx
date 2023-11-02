@@ -23,22 +23,22 @@ export default function Login() {
    }
 
    return (
-      <div className="grid md:grid-cols-12 sm:grid-cols-1 min-h-screen">
+      <div className="grid lg:grid-cols-12 md:grid-cols-1 min-h-screen">
          <Card
             radius="none"
             shadow="none"
-            className="md:col-span-8 mx-auto my-auto"
+            className="hidden md:col-span-7 mx-auto my-auto"
          >
             <Image radius="sm" width={700} alt="login_logo" src="/Login.svg" />
          </Card>
          <Card
             radius="none"
             shadow="none"
-            className="md:col-span-4 my-auto max-w-[600px]"
+            className=" md:col-span-5 my-auto max-w-[600px]"
          >
             <CardBody className="flex flex-col">
                <div className="flex flex-col mb-5">
-                  <p className="text-xl pb-1 font-semibold">
+                  <p className="text-2xl pb-1 font-semibold ">
                      Welcome to Elite Essentials
                   </p>
                   <p className="text-small text-default-800 ">
