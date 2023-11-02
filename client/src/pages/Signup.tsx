@@ -27,7 +27,7 @@ function Signup() {
          <Card
             radius="none"
             shadow="none"
-            className="col-span-7 mx-auto my-auto"
+            className="md:col-span-7 mx-auto my-auto"
          >
             <Image
                loading="eager"
@@ -40,7 +40,7 @@ function Signup() {
          <Card
             radius="none"
             shadow="none"
-            className="col-span-5 my-auto max-w-[600px]"
+            className="md:col-span-5 mx-auto my-auto min-w-[500px]"
          >
             <CardBody className="flex flex-col">
                <div className="flex flex-col mb-5 text-center">

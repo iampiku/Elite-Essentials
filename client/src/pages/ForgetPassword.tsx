@@ -1,14 +1,21 @@
-import { Card, CardBody, Link, Button, Image, Input } from "@nextui-org/react";
+import { Card, CardBody, Button, Image, Input } from "@nextui-org/react";
 
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 function ForgetPassword() {
+   const navigate = useNavigate();
    const [newPassword, setNewPassword] = useState("");
    const [passwordCheck, setPasswordCheck] = useState("");
    const [currentPassword, setCurrentPassword] = useState("");
 
    function handleLogin() {
       console.log({ newPassword, passwordCheck, currentPassword });
+   }
+
+   function onHomeClick() {
+      navigate("/login");
    }
 
    return (
@@ -29,7 +36,7 @@ function ForgetPassword() {
          <Card
             radius="none"
             shadow="none"
-            className=" md:col-span-5 my-auto max-w-[600px]"
+            className="md:col-span-5 mx-auto my-auto min-w-[500px]"
          >
             <CardBody className="flex flex-col">
                <div className="flex flex-col mb-5">
@@ -68,14 +75,14 @@ function ForgetPassword() {
                   className="bg-[#066a73] text-white w-full mb-5"
                   onClick={handleLogin}
                >
-                  LOGIN
+                  Reset password
                </Button>
-               <div className="flex justify-center gap-1">
-                  <p>New on Elite Essentials?</p>
-                  <Link showAnchorIcon href="http://localhost:5173/signup">
-                     Create an account
-                  </Link>
-               </div>
+               <Button
+                  className="bg-[#066a73] opacity-60 text-white w-full mb-5"
+                  onClick={onHomeClick}
+               >
+                  Go back to Login
+               </Button>
             </CardBody>
          </Card>
       </div>

@@ -37,7 +37,7 @@ export default function Login() {
          <Card
             radius="none"
             shadow="none"
-            className=" md:col-span-5 my-auto max-w-[600px]"
+            className="md:col-span-5 mx-auto my-auto min-w-[500px]"
          >
             <CardBody className="flex flex-col">
                <div className="flex flex-col mb-5 text-center">
@@ -71,7 +71,12 @@ export default function Login() {
                   >
                      Remember me
                   </Checkbox>
-                  <Link>Forget Password?</Link>
+                  <Link
+                     className="cursor-pointer"
+                     href="http://localhost:5173/forget-password"
+                  >
+                     Forget Password?
+                  </Link>
                </div>
                <Button
                   className="bg-[#066a73] text-white w-full mb-5"
