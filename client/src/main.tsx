@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+// import { motion } from "framer-motion";
+
 import "./index.css";
 import { NextUIProvider } from "@nextui-org/react";
 
@@ -12,7 +14,10 @@ import PageNotFound from "@/pages/PageNotFound";
 ReactDOM.createRoot(document.getElementById("root")!).render(
    <React.StrictMode>
       <NextUIProvider>
-         <RouterProvider router={routes} fallbackElement={<PageNotFound />} />
+         <RouterProvider
+            router={routes}
+            fallbackElement={<PageNotFound />}
+         ></RouterProvider>
       </NextUIProvider>
    </React.StrictMode>
 );

@@ -1,8 +1,8 @@
 import App from "@/App";
-import Login from "@/pages/Login";
-import Signup from "@/pages/Signup";
+import Login from "@/pages/auth/Login";
+import Signup from "@/pages/auth/Signup";
 import PageNotFound from "@/pages/PageNotFound";
-import ForgetPassword from "@/pages/ForgetPassword";
+import ForgetPassword from "@/pages/auth/ForgetPassword";
 
 import { createBrowserRouter } from "react-router-dom";
 

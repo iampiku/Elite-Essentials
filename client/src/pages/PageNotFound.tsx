@@ -10,8 +10,12 @@ export default function PageNotFound() {
    }
 
    return (
-      <div className="con flex justify-center items-center min-h-screen">
-         <Card className="min-w-[900px]" radius="none" shadow="none">
+      <div className="flex justify-center items-center min-h-screen bg-gray-200">
+         <Card
+            className="min-w-[900px] bg-gray-200"
+            radius="none"
+            shadow="none"
+         >
             <CardBody className="flex items-center">
                <Image
                   radius="sm"

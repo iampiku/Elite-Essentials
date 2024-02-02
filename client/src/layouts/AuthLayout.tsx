@@ -1,11 +1,42 @@
-function AuthLayout() {
+interface Props {
+   infographicUrl: string;
+   children: ReactNode;
+}
+
+import { Image, Card } from "@nextui-org/react";
+import { ReactNode } from "react";
+
+/**
+ * Renders the AuthLayout component with an infographic and children.
+ *
+ * @param {Readonly<Props>} props - The props object containing infographicUrl and children.
+ * @return {JSX.Element} The rendered AuthLayout component.
+ */
+function AuthLayout({
+   infographicUrl,
+   children,
+}: Readonly<Props>): JSX.Element {
    return (
-      <main className="grid grid-cols-12 gap-2">
-         <div className="col-span-8">Login Infographics</div>
-         <div className="col-span-4">
-            <form></form>
+      <div className="grid lg:grid-cols-12 md:grid-cols-1 min-h-screen ">
+         <div className="h-full flex justify-center my-auto md:col-span-7">
+            <Card
+               isBlurred
+               radius="none"
+               shadow="none"
+               className="mx-auto my-auto "
+            >
+               <Image
+                  isBlurred
+                  loading="eager"
+                  radius="sm"
+                  width={500}
+                  alt="login_logo"
+                  src={infographicUrl}
+               />
+            </Card>
          </div>
-      </main>
+         {children}
+      </div>
    );
 }
 

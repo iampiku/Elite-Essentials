@@ -1,39 +1,21 @@
-import {
-   Card,
-   CardBody,
-   Link,
-   Button,
-   Image,
-   Input,
-   Checkbox,
-} from "@nextui-org/react";
+import { Card, CardBody, Link, Button, Input } from "@nextui-org/react";
 
 import { useState } from "react";
 
-export default function Login() {
+import AuthLayout from "@/layouts/AuthLayout";
+
+function Signup() {
+   const [userName, setUserName] = useState("");
    const [email, setEmail] = useState("");
+   const [phone, setPhone] = useState("");
    const [password, setPassword] = useState("");
-   const [rememberDevice, setRememberDevice] = useState(false);
 
    function handleLogin() {
-      console.log({ email, password, rememberDevice });
+      console.log({ userName, email, phone, password });
    }
 
    return (
-      <div className="grid lg:grid-cols-12 md:grid-cols-1 min-h-screen">
-         <Card
-            radius="none"
-            shadow="none"
-            className="md:col-span-7 mx-auto my-auto"
-         >
-            <Image
-               radius="sm"
-               loading="eager"
-               width={500}
-               alt="login_logo"
-               src="/Login.svg"
-            />
-         </Card>
+      <AuthLayout infographicUrl="/Sign_up.svg">
          <Card
             radius="none"
             shadow="none"
@@ -41,13 +23,21 @@ export default function Login() {
          >
             <CardBody className="flex flex-col">
                <div className="flex flex-col mb-5 text-center">
-                  <p className="text-2xl pb-1 font-semibold ">
+                  <p className="text-2xl pb-1 font-semibold">
                      Welcome to Elite Essentials
                   </p>
                   <p className="text-small text-default-800 ">
                      One stop shop for all your needs.
                   </p>
                </div>
+               <Input
+                  size="sm"
+                  type="text"
+                  label="Username*"
+                  className="mb-5"
+                  value={userName}
+                  onValueChange={setUserName}
+               ></Input>
                <Input
                   size="sm"
                   type="email"
@@ -58,40 +48,40 @@ export default function Login() {
                ></Input>
                <Input
                   size="sm"
+                  type="number"
+                  label="Phone Number*"
+                  className="mb-5"
+                  value={phone}
+                  onValueChange={setPhone}
+               ></Input>
+               <Input
+                  size="sm"
                   type="password"
                   label="Password*"
                   className="mb-5"
                   value={password}
                   onValueChange={setPassword}
                ></Input>
-               <div className="flex justify-between mb-5">
-                  <Checkbox
-                     isSelected={rememberDevice}
-                     onValueChange={setRememberDevice}
-                  >
-                     Remember me
-                  </Checkbox>
-                  <Link
-                     className="cursor-pointer"
-                     href="http://localhost:5173/forget-password"
-                  >
-                     Forget Password?
-                  </Link>
-               </div>
                <Button
                   className="bg-[#066a73] text-white w-full mb-5"
                   onClick={handleLogin}
                >
-                  LOGIN
+                  REGISTER
                </Button>
                <div className="flex justify-center gap-1">
-                  <p>New on Elite Essentials?</p>
-                  <Link showAnchorIcon href="http://localhost:5173/signup">
-                     Create an account
+                  <p>Already have an account?</p>
+                  <Link
+                     showAnchorIcon
+                     className="cursor-pointer"
+                     href="http://localhost:5173/login"
+                  >
+                     Login
                   </Link>
                </div>
             </CardBody>
          </Card>
-      </div>
+      </AuthLayout>
    );
 }
+
+export default Signup;

@@ -1,10 +1,12 @@
-import { Card, CardBody, Button, Image, Input } from "@nextui-org/react";
+import { Card, CardBody, Button, Input } from "@nextui-org/react";
 
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-function ForgetPassword() {
+import AuthLayout from "@/layouts/AuthLayout";
+
+export default function ForgetPassword() {
    const navigate = useNavigate();
    const [newPassword, setNewPassword] = useState("");
    const [passwordCheck, setPasswordCheck] = useState("");
@@ -19,21 +21,9 @@ function ForgetPassword() {
    }
 
    return (
-      <div className="grid lg:grid-cols-12 md:grid-cols-1 min-h-screen">
+      <AuthLayout infographicUrl="/Forgot_Password.svg">
          <Card
-            radius="none"
-            shadow="none"
-            className="md:col-span-7 mx-auto my-auto"
-         >
-            <Image
-               loading="eager"
-               radius="sm"
-               width={500}
-               alt="login_logo"
-               src="/Forgot_Password.svg"
-            />
-         </Card>
-         <Card
+            isBlurred
             radius="none"
             shadow="none"
             className="md:col-span-5 mx-auto my-auto min-w-[500px]"
@@ -85,8 +75,6 @@ function ForgetPassword() {
                </Button>
             </CardBody>
          </Card>
-      </div>
+      </AuthLayout>
    );
 }
-
-export default ForgetPassword;
