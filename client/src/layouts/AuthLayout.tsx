@@ -29,7 +29,7 @@ function AuthLayout({
                   isBlurred
                   loading="eager"
                   radius="sm"
-                  width={500}
+                  width={450}
                   alt="login_logo"
                   src={infographicUrl}
                />

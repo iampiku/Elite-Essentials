@@ -39,24 +39,27 @@ export default function ForgetPassword() {
                </div>
                <Input
                   size="sm"
+                  isRequired
                   type="password"
-                  label="Current Password*"
+                  label="Current Password"
                   className="mb-5"
                   value={currentPassword}
                   onValueChange={setCurrentPassword}
                ></Input>
                <Input
                   size="sm"
+                  isRequired
                   type="password"
-                  label="New Password*"
+                  label="New Password"
                   className="mb-5"
                   value={passwordCheck}
                   onValueChange={setPasswordCheck}
                ></Input>
                <Input
                   size="sm"
+                  isRequired
                   type="password"
-                  label="Confirm Password*"
+                  label="Confirm Password"
                   className="mb-5"
                   value={newPassword}
                   onValueChange={setNewPassword}

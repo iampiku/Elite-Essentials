@@ -32,16 +32,18 @@ function Signup() {
                </div>
                <Input
                   size="sm"
+                  isRequired
                   type="text"
-                  label="Username*"
+                  label="Username"
                   className="mb-5"
                   value={userName}
                   onValueChange={setUserName}
                ></Input>
                <Input
                   size="sm"
+                  isRequired
                   type="email"
-                  label="Email*"
+                  label="Email"
                   className="mb-5"
                   value={email}
                   onValueChange={setEmail}
@@ -49,7 +51,8 @@ function Signup() {
                <Input
                   size="sm"
                   type="number"
-                  label="Phone Number*"
+                  isRequired
+                  label="Phone Number"
                   className="mb-5"
                   value={phone}
                   onValueChange={setPhone}
@@ -57,7 +60,9 @@ function Signup() {
                <Input
                   size="sm"
                   type="password"
-                  label="Password*"
+                  isRequired
+                  radius="sm"
+                  label="Password"
                   className="mb-5"
                   value={password}
                   onValueChange={setPassword}
